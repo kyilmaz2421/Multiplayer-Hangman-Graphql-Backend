@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(process.env.MONGODB_URL, {
-  useNewUrlParser: true
+  useNewUrlParser: true,
 });
 
 mongoose.Promise = global.Promise;
-module.exports = mongoose.connection
+module.exports = mongoose.connection;

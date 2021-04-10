@@ -1,4 +1,4 @@
-const authResolver = require('./authentication');
+const authResolver = require("./authentication");
 
 const rootResolver = {
   ...authResolver,
