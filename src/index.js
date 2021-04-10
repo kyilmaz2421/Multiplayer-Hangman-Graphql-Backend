@@ -32,8 +32,7 @@ const expressSession = session({
 const app = express();
 
 app.use(cors({
-  credentials: true,
-  origin: process.env.ORIGIN
+  credentials: true
 }));
 
 app.use(
@@ -51,8 +50,7 @@ app.use('/graphql',
 
 const server = createServer(app);
 const io = socketio(server, {
-  cors:true,
-  origins: process.env.ORIGIN,
+  cors:true
 });
 
 io.use(socketExpressSession(expressSession));
